@@ -267,7 +267,7 @@ CREATE TABLE member
 
 CREATE TABLE member_history
 (
-	memberid	 VARCHAR(16) NOT NULL PRIMARY KEY,
+	memberid	 VARCHAR(16) NOT NULL,
 	item_oid	 INTEGER NOT NULL,
 	copyid		 VARCHAR(64) NOT NULL,
 	reserved_date	 VARCHAR(32) NOT NULL,

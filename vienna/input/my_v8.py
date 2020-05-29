@@ -43,10 +43,10 @@ def main(input): #main function
 						print count
 						print cpps
 						cpps = str.strip(cpps)
-						op_f = open("/extra/wus/myprogram/"+str.strip(t_line)+"/cppfile/" + cpps,'r') #path to those .cpp
-					#	op_f_s = open("/extra/wus/myprogram/"+str.strip(t_line)+"/cppfile/" + cpps,'r') #path to those .cpp
-					#	op_f_d = open("/extra/wus/myprogram/"+str.strip(t_line)+"/cppfile/" + cpps,'r')
-					#	op_f_i = open("/extra/wus/myprogram/"+str.strip(t_line)+"/cppfile/" + cpps,'r')
+						op_f = open(os.getcwd()+"/"+str.strip(t_line)+"/cppfile/" + cpps,'r') #path to those .cpp
+					#	op_f_s = open(os.getcwd()+"/"+str.strip(t_line)+"/cppfile/" + cpps,'r') #path to those .cpp
+					#	op_f_d = open(os.getcwd()+"/"+str.strip(t_line)+"/cppfile/" + cpps,'r')
+					#	op_f_i = open(os.getcwd()+"/"+str.strip(t_line)+"/cppfile/" + cpps,'r')
 						#pdb.set_trace()
 						(read_data, cts1) = ex_st_ct(op_f)
 						#(read_data_s, ctss) = ex_st_s(op_f_s)
@@ -59,7 +59,7 @@ def main(input): #main function
 							p = cpps.split(".")[1]	#parse input name & take the first elem
 							#create .sql with table schema
 							#it may catch duplicate table(same table name), use v# represent it
-							a = open("/extra/wus/myprogram/"+str.strip(t_line)+"/cppfile/out_" + p + ".sql" , 'w')
+							a = open(os.getcwd()+"/"+str.strip(t_line)+"/cppfile/out_" + p + ".sql" , 'w')
 							che_schema = cts1.split("\n")
 							v_num = 0
 							tmp_tnlist = []
@@ -125,7 +125,7 @@ def main(input): #main function
 #							hs_s.append(cpps)  #has schema log
 #							p_s = cpps.split(".")[0]	#parse input name & take the first elem
 #							#create .sql with table schema
-#							a_s = open("/extra/wus/myprogram/"+str.strip(t_line)+"/cppfile/select_" + p_s + ".sql" , 'w')
+#							a_s = open(os.getcwd()+"/"+str.strip(t_line)+"/cppfile/select_" + p_s + ".sql" , 'w')
 #							for elem in ctss:
 #								a_s.write(elem)
 #						else: 
@@ -137,7 +137,7 @@ def main(input): #main function
 #							hs_d.append(cpps)  #has schema log
 #							p_d = cpps.split(".")[0]	#parse input name & take the first elem
 #							#create .sql with table schema
-#							a_d = open("/extra/wus/myprogram/"+str.strip(t_line)+"/cppfile/drop_" + p_d + ".sql" , 'w')
+#							a_d = open(os.getcwd()+"/"+str.strip(t_line)+"/cppfile/drop_" + p_d + ".sql" , 'w')
 #							for elem in ctsd:
 #								a_d.write(elem)
 #						else: 
@@ -149,7 +149,7 @@ def main(input): #main function
 #							hs_i.append(cpps)  #has schema log
 #							p_i = cpps.split(".")[0]	#parse input name & take the first elem
 #							#create .sql with table schema
-#							a_i = open("/extra/wus/myprogram/"+str.strip(t_line)+"/cppfile/insert_" + p_i + ".sql" , 'w')
+#							a_i = open(os.getcwd()+"/"+str.strip(t_line)+"/cppfile/insert_" + p_i + ".sql" , 'w')
 #							for elem in ctsi:
 #								a_i.write(elem)
 #						else: 
@@ -158,38 +158,38 @@ def main(input): #main function
 					##pdb.set_trace
 					# write into hs_log & ns_log
 					if hs:
-						hs_log = open("/extra/wus/myprogram/"+str.strip(t_line)+"/has_schema_log","w")
+						hs_log = open(os.getcwd()+"/"+str.strip(t_line)+"/has_schema_log","w")
 						for elem in hs:
 							hs_log.write(elem+ "\n")
 					if ns:
-						ns_log = open("/extra/wus/myprogram/"+str.strip(t_line)+"/no_schema_log","w")
+						ns_log = open(os.getcwd()+"/"+str.strip(t_line)+"/no_schema_log","w")
 						for elem in ns:
 							ns_log.write(elem + "\n")
 					
 #					if hs_s:
-#						hs_s_log = open("/extra/wus/myprogram/"+str.strip(t_line)+"/has_select_log","w")
+#						hs_s_log = open(os.getcwd()+"/"+str.strip(t_line)+"/has_select_log","w")
 #						for elem in hs_s:
 #							hs_s_log.write(elem+ "\n")
 #					if ns_s:
-#						ns_s_log = open("/extra/wus/myprogram/"+str.strip(t_line)+"/no_select_log","w")
+#						ns_s_log = open(os.getcwd()+"/"+str.strip(t_line)+"/no_select_log","w")
 #						for elem in ns_s:
 #							ns_s_log.write(elem + "\n")
 #					
 #					if hs_d:
-#						hs_d_log = open("/extra/wus/myprogram/"+str.strip(t_line)+"/has_drop_log","w")
+#						hs_d_log = open(os.getcwd()+"/"+str.strip(t_line)+"/has_drop_log","w")
 #						for elem in hs_d:
 #							hs_d_log.write(elem+ "\n")
 #					if ns_d:
-#						ns_d_log = open("/extra/wus/myprogram/"+str.strip(t_line)+"/no_drop_log","w")
+#						ns_d_log = open(os.getcwd()+"/"+str.strip(t_line)+"/no_drop_log","w")
 #						for elem in ns_d:
 #							ns_d_log.write(elem + "\n")
 #					
 #					if hs_i:
-#						hs_i_log = open("/extra/wus/myprogram/"+str.strip(t_line)+"/has_insert_log","w")
+#						hs_i_log = open(os.getcwd()+"/"+str.strip(t_line)+"/has_insert_log","w")
 #						for elem in hs_i:
 #							hs_i_log.write(elem+ "\n")
 #					if ns_i:
-#						ns_i_log = open("/extra/wus/myprogram/"+str.strip(t_line)+"/no_insert_log","w")
+#						ns_i_log = open(os.getcwd()+"/"+str.strip(t_line)+"/no_insert_log","w")
 #						for elem in ns_i:
 #							ns_i_log.write(elem + "\n")
 						
@@ -235,7 +235,12 @@ def ex_st_ct(obj):
 		cts = ''.join(read_data)	#convert to str
 		schemaPattern = re.compile(r'".*"\D?\D?;?')
 		result = schemaPattern.findall(cts)	#type(result) = list 
-	#	pdb.set_trace()	
+	#	pdb.set_trace()
+
+		first_DDL_query = result[0]
+		if first_DDL_query.endswith(")"):
+			result[0] = first_DDL_query.replace("])", ";")
+
 		cts1 = ''.join(result)	#convert to str
 		cts1 = cts1.replace('\"]','')
 		cts1 = cts1.replace('\"','')
@@ -469,7 +474,7 @@ def ex_tname(input):
 						break
 					elif t_sqls == t:  #string compare cannot use 't_sqls is t'
 						if sqls.find("out_") is not -1:
-							op_t = open("/extra/wus/myprogram/"+str.strip(t_line)+"/cppfile/" + sqls,'r') #path to those .cpp
+							op_t = open(os.getcwd()+"/"+str.strip(t_line)+"/cppfile/" + sqls,'r') #path to those .cpp
 							read_data = []
 							atl_s.append("\n" + sqls + "\n")
 							for line in op_t:
@@ -486,7 +491,7 @@ def ex_tname(input):
 												atl_s.append(line)
 							op_t.close()	
 						elif sqls.find("drop_") is not -1:
-							op_d = open("/extra/wus/myprogram/"+str.strip(t_line)+"/cppfile/" + sqls,'r') #path to those .cpp
+							op_d = open(os.getcwd()+"/"+str.strip(t_line)+"/cppfile/" + sqls,'r') #path to those .cpp
 							atl_ds.append("\n" + sqls + "\n")
 							for line in op_d:
 								if not line:
@@ -498,12 +503,12 @@ def ex_tname(input):
 							op_d.close()
 				# collect all table names in log 
 #				if atl:
-#					all_tname_log = open("/extra/wus/myprogram/"+str.strip(t_line)+"/schema/all_tname_log","w")
+#					all_tname_log = open(os.getcwd()+"/"+str.strip(t_line)+"/schema/all_tname_log","w")
 #					for elem in atl:
 #						all_tname_log.write(elem+"\n")
 				filter_duplicate = set()
 				if atl:
-					all_tname_log = open("/extra/wus/myprogram/"+str.strip(t_line)+"/schema/all_tname_log","w")
+					all_tname_log = open(os.getcwd()+"/"+str.strip(t_line)+"/schema/all_tname_log","w")
 					for elem in atl:
 						filter_duplicate.add(elem)
 					for elem in filter_duplicate:
@@ -512,18 +517,18 @@ def ex_tname(input):
 					
 					# collect all tables name map with each .sql
 				if atl_s:
-					all_tname_log_s = open("/extra/wus/myprogram/"+str.strip(t_line)+"/schema/all_tname_log_s","w")
+					all_tname_log_s = open(os.getcwd()+"/"+str.strip(t_line)+"/schema/all_tname_log_s","w")
 					for elem in atl_s:
 						all_tname_log_s.write(elem+"\n")
 
 
 				# collect all drop .sql
 				if atld:
-					all_drop_log = open("/extra/wus/myprogram/"+str.strip(t_line)+"/schema/all_drop_log","w")
+					all_drop_log = open(os.getcwd()+"/"+str.strip(t_line)+"/schema/all_drop_log","w")
 					for elem in atld:
 						all_drop_log.write(elem+"\n")
 				if atl_ds:
-					all_drop_log_s = open("/extra/wus/myprogram/"+str.strip(t_line)+"/schema/all_drop_log_s","w")
+					all_drop_log_s = open(os.getcwd()+"/"+str.strip(t_line)+"/schema/all_drop_log_s","w")
 					for elem in atl_ds:
 						all_drop_log_s.write(elem+"\n")
 		

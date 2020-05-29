@@ -2,7 +2,7 @@
 # Courtesy of Shengfeng (Kent) Wu and Iulian Neamtiu, University of California, 2011
 ####################################################################################
 
-import pdb,sys,os,commands,re,shlex,subprocess
+import pdb,sys,os,commands,re,shlex,subprocess,shutil
 #input a tag list
 #output are out_*.sql for each version in ex_c_sql folders
 #create a list of whole table name
@@ -25,10 +25,20 @@ def main(input):
 				os.chdir("ex_c_sql")
 				cmd_2 = "mkdir " + str.strip(line)
 				p_2 = commands.getoutput(cmd_2)
-				cmd_6 = "cp ../cpcpp2d ../cpcpp2d.sh " + "../" + str.strip(line) + "/cppfile"
-				p_6 = commands.getoutput(str.strip(cmd_6))
-				print cmd_6
-				print p_6
+				#cmd_6 = "cp ../cpcpp2d ../cpcpp2d.sh " + "../" + str.strip(line) + "/cppfile"
+
+				src_folder = "{}/../{}/cppfile/".format(os.getcwd(), line.strip())
+				dest_folder = "{}/{}/".format(os.getcwd(), line.strip())
+				src_files = os.listdir(src_folder)
+				for file_name in src_files:
+					if file_name.endswith(".sql"):
+						src = os.path.join(src_folder, file_name)
+						dst = os.path.join(dest_folder, file_name)
+						shutil.copyfile(src, dst)
+
+				#p_6 = commands.getoutput(str.strip(cmd_6))
+				#print cmd_6
+				#print p_6
 				#pdb.set_trace()	
 				try:	
 					tname_s = bm(str.strip(line))
@@ -40,9 +50,10 @@ def main(input):
 #					p = commands.getoutput(c)
 #					print p
 					tag_list.pop(-1)
-					os.chdir("../../ex_c_sql")
+					#os.chdir("../../ex_c_sql")
+					os.chdir("..")
 					cmd_3 = "rm -rf " + str.strip(line)
-					p_3 = commands.getoutput(cmd_3)
+					#p_3 = commands.getoutput(cmd_3)
 				#pdb.set_trace()			
 				try:
 #					pdb.set_trace()
@@ -60,36 +71,37 @@ def main(input):
 								tmppp_set = tmp_dict[elem]
 								ft_dict[elem] = tmpp_set | tmppp_set
 				except:
-					os.chdir("/extra/wus/myprogram")
+					os.chdir(os.getcwd())
 					os.chdir("../../ex_c_sql")
 					cmd_4 = "rm -rf " + str.strip(line)
-					p_4 = commands.getoutput(cmd_4)
+					#p_4 = commands.getoutput(cmd_4)
 					
-				os.chdir("/extra/wus/myprogram")
+				os.chdir(os.getcwd())
 		f.close()
 		
 		if whole_tname:
-			f = open("/extra/wus/myprogram/ex_c_sql/whole_tname_list",'w')	
+			f = open(os.getcwd()+"/ex_c_sql/whole_tname_list",'w')	
 			for elem in whole_tname:
 				f.write(elem + "\n")
 		#pdb.set_trace()			
 		if ft_dict:
-			f = open("/extra/wus/myprogram/ex_c_sql/whole_tname_list_s",'w')	
+			f = open(os.getcwd()+"/ex_c_sql/whole_tname_list_s",'w')	
 			for elem in ft_dict:
 				f.write(elem + "\n")
 				for elemm in ft_dict[elem]:
 					f.write(elemm + "\n")
 		if tag_list:
-			f = open("/extra/wus/myprogram/ex_c_sql/refine_taglist",'w')	
+			f = open(os.getcwd()+"/ex_c_sql/refine_taglist",'w')	
 			for elem in tag_list:
 				f.write(elem + "\n")
-	except:
+	except Exception as e:
 		print("??????read data error??????")
+		print e
 
 def bm_s(line):
 	line = line
 	ft_dict = {}
-	path = "/extra/wus/myprogram/" + str.strip(line) + "/schema"
+	path = os.getcwd()+"/" + str.strip(line) + "/schema"
 	try:
 		os.chdir(path)
 		f = open('all_tname_log_s','r')
@@ -150,12 +162,12 @@ def bm_s(line):
 def bm(line):
 	line = line
 	tname_set = set()
-	path = "/extra/wus/myprogram/" + str.strip(line) + "/schema"
+	path = os.getcwd()+"/" + str.strip(line) + "/schema"
 	os.chdir(path)
 	f = open('all_tname_log','r')
 	for elem in f:
 		tname_set.add(str.strip(elem))
-	cmd = "/extra/wus/myprogram/" + str.strip(line) + "/cppfile"
+	cmd = os.getcwd()+"/" + str.strip(line) + "/cppfile"
 	os.chdir(cmd)
 	cmd_0 = "find -name  " + "\"" + "out_*.sql" + "\"" +" > sqlfile"
 	p_0 = commands.getoutput(cmd_0)
@@ -169,7 +181,7 @@ def bm(line):
 			if not c_line:
 				break
 			else:
-				cmd = str.strip(c_line) + " /extra/wus/myprogram/ex_c_sql/" + str.strip(line)
+				cmd = str.strip(c_line) + " " + os.getcwd() + "/ex_c_sql/" + str.strip(line)
 				p = commands.getoutput(cmd)
 				print cmd
 				print p

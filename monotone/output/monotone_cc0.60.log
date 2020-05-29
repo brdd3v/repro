@@ -1,0 +1,461 @@
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_01_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_02_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_02_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_010_mod.sql
+ALTER TABLE file_certs ADD COLUMN hash int(11) NOT NULL;
+ALTER TABLE file_certs DROP INDEX id; # was UNIQUE (id,name,value,keypair,signature)
+ALTER TABLE file_certs ADD UNIQUE hash (hash);
+ALTER TABLE file_certs ADD UNIQUE name (name,id,value,keypair,signature);
+DROP TABLE file_deltas;
+DROP TABLE files;
+ALTER TABLE manifest_certs ADD COLUMN hash int(11) NOT NULL;
+ALTER TABLE manifest_certs DROP INDEX id; # was UNIQUE (id,name,value,keypair,signature)
+ALTER TABLE manifest_certs ADD UNIQUE hash (hash);
+ALTER TABLE manifest_certs ADD UNIQUE name (name,id,value,keypair,signature);
+DROP TABLE manifest_deltas;
+DROP TABLE manifests;
+ALTER TABLE posting_queue DROP COLUMN server; # was int(11) NOT NULL
+ALTER TABLE posting_queue DROP COLUMN newsgroup; # was int(11) NOT NULL
+ALTER TABLE posting_queue DROP COLUMN old_id; # was int(11) NOT NULL
+ALTER TABLE posting_queue DROP COLUMN new_id; # was int(11) NOT NULL
+ALTER TABLE posting_queue ADD COLUMN url int(11) NOT NULL;
+ALTER TABLE posting_queue ADD COLUMN content int(11) NOT NULL;
+ALTER TABLE posting_queue DROP INDEX server; # was UNIQUE (server,old_id,new_id)
+ALTER TABLE private_keys ADD COLUMN hash int(11) NOT NULL;
+ALTER TABLE private_keys ADD UNIQUE hash (hash);
+ALTER TABLE public_keys ADD COLUMN hash int(11) NOT NULL;
+ALTER TABLE public_keys ADD UNIQUE hash (hash);
+DROP TABLE schema_version;
+ALTER TABLE sequence_numbers DROP COLUMN server; # was int(11) NOT NULL
+ALTER TABLE sequence_numbers DROP COLUMN seq; # was int(11) NOT NULL
+ALTER TABLE sequence_numbers DROP COLUMN newsgroup; # was int(11) NOT NULL
+ALTER TABLE sequence_numbers ADD COLUMN major int(11) NOT NULL;
+ALTER TABLE sequence_numbers ADD COLUMN minor int(11) NOT NULL;
+ALTER TABLE sequence_numbers ADD COLUMN url int(11) NOT NULL;
+ALTER TABLE sequence_numbers DROP INDEX server; # was UNIQUE (server,newsgroup)
+ALTER TABLE sequence_numbers ADD PRIMARY KEY (url);
+CREATE TABLE incoming_queue (
+url int(11) NOT NULL,
+content int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE merkle_nodes (
+type int(11) NOT NULL,
+collection int(11) NOT NULL,
+level int(11) NOT NULL,
+prefix int(11) NOT NULL,
+body int(11) NOT NULL,
+UNIQUE KEY type (type,collection,level,prefix)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE netserver_manifests (
+url int(11) NOT NULL,
+manifest int(11) NOT NULL,
+UNIQUE KEY url (url,manifest)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ERROR 
+Use of uninitialized value in pattern match (m//) at /usr/local/share/perl/5.26.1/MySQL/Diff.pm line 434.
+Use of uninitialized value in pattern match (m//) at /usr/local/share/perl/5.26.1/MySQL/Diff.pm line 434.
+Use of uninitialized value in pattern match (m//) at /usr/local/share/perl/5.26.1/MySQL/Diff.pm line 434.
+Use of uninitialized value in pattern match (m//) at /usr/local/share/perl/5.26.1/MySQL/Diff.pm line 434.
+Use of uninitialized value in pattern match (m//) at /usr/local/share/perl/5.26.1/MySQL/Diff.pm line 434.
+
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_010_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_011_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_011_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_012_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_012_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_013_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_013_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_014_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_014_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_015_mod.sql
+DROP TABLE file_certs;
+DROP TABLE incoming_queue;
+DROP TABLE merkle_nodes;
+DROP TABLE netserver_manifests;
+DROP TABLE posting_queue;
+DROP TABLE sequence_numbers;
+CREATE TABLE revision_ancestry (
+parent int(11) NOT NULL,
+child int(11) NOT NULL,
+UNIQUE KEY parent (parent,child)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE revision_certs (
+hash int(11) NOT NULL,
+id int(11) NOT NULL,
+name int(11) NOT NULL,
+value int(11) NOT NULL,
+keypair int(11) NOT NULL,
+signature int(11) NOT NULL,
+UNIQUE KEY hash (hash),
+UNIQUE KEY name (name,id,value,keypair,signature)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE revisions (
+id int(11) NOT NULL,
+data int(11) NOT NULL,
+PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_015_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_016_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_016_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_017_mod.sql
+CREATE TABLE branch_epochs (
+hash int(11) NOT NULL,
+branch int(11) NOT NULL,
+epoch int(11) NOT NULL,
+UNIQUE KEY hash (hash),
+UNIQUE KEY branch (branch)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_017_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_018_mod.sql
+CREATE TABLE db_vars (
+domain int(11) NOT NULL,
+name int(11) NOT NULL,
+value int(11) NOT NULL,
+UNIQUE KEY domain (domain,name)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_018_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_019_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_019_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_020_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_020_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_021_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_021_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_022_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_022_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_023_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_023_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_024_mod.sql
+DROP TABLE private_keys;
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_024_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_025_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_025_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_026_mod.sql
+CREATE TABLE file_deltas (
+id int(11) NOT NULL,
+base int(11) NOT NULL,
+delta int(11) NOT NULL,
+UNIQUE KEY id (id,base)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE files (
+id int(11) NOT NULL,
+data int(11) NOT NULL,
+PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE next_roster_node_number (
+node int(11) NOT NULL,
+PRIMARY KEY (node)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE revision_roster (
+rev_id int(11) NOT NULL,
+roster_id int(11) NOT NULL,
+PRIMARY KEY (rev_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE roster_deltas (
+id int(11) NOT NULL,
+base int(11) NOT NULL,
+delta int(11) NOT NULL,
+UNIQUE KEY id (id,base)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE rosters (
+id int(11) NOT NULL,
+data int(11) NOT NULL,
+PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_026_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_027_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_027_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_028_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_028_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_029_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_029_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_030_mod.sql
+DROP TABLE revision_roster;
+ALTER TABLE roster_deltas ADD COLUMN checksum int(11) NOT NULL;
+ALTER TABLE roster_deltas DROP INDEX id; # was UNIQUE (id,base)
+ALTER TABLE roster_deltas ADD PRIMARY KEY (id);
+ALTER TABLE rosters ADD COLUMN checksum int(11) NOT NULL;
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_030_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_031_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_031_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_032_mod.sql
+CREATE TABLE heights (
+revision int(11) NOT NULL,
+height int(11) NOT NULL,
+UNIQUE KEY revision (revision,height)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_032_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_033_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_033_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_034_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_034_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_035_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_035_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_036_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_036_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_037_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_037_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_038_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_038_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_039_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_039_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_040_mod.sql
+ALTER TABLE revision_certs DROP INDEX name; # was UNIQUE (name,id,value,keypair,signature)
+ALTER TABLE revision_certs ADD UNIQUE name (name,value,id,keypair,signature);
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_040_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_041_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_041_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_042_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_042_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_043_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_043_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_044_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_044_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_045_mod.sql
+ALTER TABLE public_keys DROP COLUMN hash; # was int(11) NOT NULL
+ALTER TABLE public_keys ADD COLUMN name int(11) NOT NULL;
+ALTER TABLE public_keys DROP INDEX hash; # was UNIQUE (hash)
+ALTER TABLE revision_certs DROP COLUMN id; # was int(11) NOT NULL
+ALTER TABLE revision_certs DROP COLUMN keypair; # was int(11) NOT NULL
+ALTER TABLE revision_certs ADD COLUMN keypair_id int(11) NOT NULL;
+ALTER TABLE revision_certs ADD COLUMN revision_id int(11) NOT NULL;
+ALTER TABLE revision_certs DROP INDEX name; # was UNIQUE (name,value,id,keypair,signature)
+ALTER TABLE revision_certs ADD UNIQUE name (name,value,revision_id,keypair_id,signature);
+ERROR 
+Use of uninitialized value in pattern match (m//) at /usr/local/share/perl/5.26.1/MySQL/Diff.pm line 434.
+
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_045_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_046_mod.sql
+CREATE TABLE branch_leaves (
+branch int(11) NOT NULL,
+revision_id int(11) NOT NULL,
+UNIQUE KEY branch (branch,revision_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_046_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_047_mod.sql
+
+ERROR 
+No Error
+
+
+ INFO 
+/home/tmp/repro/monotone/input/cc/schema_047_mod.sql
+/home/tmp/repro/monotone/input/cc/schema_048_mod.sql
+
+ERROR 
+No Error
+
+

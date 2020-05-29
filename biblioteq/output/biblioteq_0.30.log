@@ -1,0 +1,287 @@
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r1.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r4.sql
+CREATE TABLE `member_history` (
+`memberid` varchar(16) NOT NULL,
+`item_oid` int(11) NOT NULL,
+`copyid` varchar(64) NOT NULL,
+`reserved_date` varchar(32) NOT NULL,
+`duedate` varchar(32) NOT NULL,
+`returned_date` varchar(32) NOT NULL,
+`myoid` int(11) NOT NULL AUTO_INCREMENT,
+`reserved_by` varchar(128) NOT NULL,
+PRIMARY KEY (`myoid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `videogame`;
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r4.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r5.sql
+ALTER TABLE `member_history` ADD COLUMN `type` varchar(16) NOT NULL;
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r5.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r11.sql
+ALTER TABLE `member_history` ADD COLUMN `item_id` varchar(32) NOT NULL;
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r11.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r16.sql
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r16.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r24.sql
+ALTER TABLE `book` CHANGE COLUMN `front_cover` `front_cover` varbinary(1024) DEFAULT NULL; # was longtext
+ALTER TABLE `book` CHANGE COLUMN `back_cover` `back_cover` varbinary(1024) DEFAULT NULL; # was longtext
+ALTER TABLE `book` ADD COLUMN `front_cover_fmt` varchar(8) DEFAULT NULL;
+ALTER TABLE `book` ADD COLUMN `back_cover_fmt` varchar(8) DEFAULT NULL;
+ALTER TABLE `cd` CHANGE COLUMN `front_cover` `front_cover` varbinary(1024) DEFAULT NULL; # was longtext
+ALTER TABLE `cd` CHANGE COLUMN `back_cover` `back_cover` varbinary(1024) DEFAULT NULL; # was longtext
+ALTER TABLE `cd` ADD COLUMN `back_cover_fmt` varchar(8) DEFAULT NULL;
+ALTER TABLE `cd` ADD COLUMN `front_cover_fmt` varchar(8) DEFAULT NULL;
+ALTER TABLE `dvd` CHANGE COLUMN `back_cover` `back_cover` varbinary(1024) DEFAULT NULL; # was longtext
+ALTER TABLE `dvd` CHANGE COLUMN `front_cover` `front_cover` varbinary(1024) DEFAULT NULL; # was longtext
+ALTER TABLE `dvd` ADD COLUMN `front_cover_fmt` varchar(8) DEFAULT NULL;
+ALTER TABLE `dvd` ADD COLUMN `back_cover_fmt` varchar(8) DEFAULT NULL;
+ALTER TABLE `magazine` CHANGE COLUMN `back_cover` `back_cover` varbinary(1024) DEFAULT NULL; # was longtext
+ALTER TABLE `magazine` CHANGE COLUMN `front_cover` `front_cover` varbinary(1024) DEFAULT NULL; # was longtext
+ALTER TABLE `magazine` ADD COLUMN `front_cover_fmt` varchar(8) DEFAULT NULL;
+ALTER TABLE `magazine` ADD COLUMN `back_cover_fmt` varchar(8) DEFAULT NULL;
+ALTER TABLE `videogame` CHANGE COLUMN `front_cover` `front_cover` varbinary(1024) DEFAULT NULL; # was longtext
+ALTER TABLE `videogame` CHANGE COLUMN `back_cover` `back_cover` varbinary(1024) DEFAULT NULL; # was longtext
+ALTER TABLE `videogame` ADD COLUMN `front_cover_fmt` varchar(8) DEFAULT NULL;
+ALTER TABLE `videogame` ADD COLUMN `back_cover_fmt` varchar(8) DEFAULT NULL;
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r24.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r35.sql
+DROP TABLE `admin`;
+ALTER TABLE `book` CHANGE COLUMN `price` `price` decimal(10,2) NOT NULL DEFAULT '0.00'; # was double(10,2) NOT NULL DEFAULT '0.00'
+ALTER TABLE `book` CHANGE COLUMN `location` `location` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `book` CHANGE COLUMN `description` `description` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `book` CHANGE COLUMN `title` `title` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `book` CHANGE COLUMN `author` `author` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `book` CHANGE COLUMN `front_cover` `front_cover` blob; # was varbinary(1024) DEFAULT NULL
+ALTER TABLE `book` CHANGE COLUMN `myoid` `myoid` int(11) NOT NULL; # was int(11) NOT NULL AUTO_INCREMENT
+ALTER TABLE `book` CHANGE COLUMN `publisher` `publisher` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `book` CHANGE COLUMN `back_cover` `back_cover` blob; # was varbinary(1024) DEFAULT NULL
+ALTER TABLE `book` DROP INDEX `myoid`; # was UNIQUE (`myoid`)
+ALTER TABLE `book_copy_info` CHANGE COLUMN `myoid` `myoid` int(11) NOT NULL; # was int(11) NOT NULL AUTO_INCREMENT
+ALTER TABLE `book_copy_info` DROP INDEX `myoid`; # was UNIQUE (`myoid`)
+ALTER TABLE `cd` CHANGE COLUMN `artist` `artist` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `cd` CHANGE COLUMN `recording_label` `recording_label` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `cd` CHANGE COLUMN `back_cover` `back_cover` blob; # was varbinary(1024) DEFAULT NULL
+ALTER TABLE `cd` CHANGE COLUMN `front_cover` `front_cover` blob; # was varbinary(1024) DEFAULT NULL
+ALTER TABLE `cd` CHANGE COLUMN `myoid` `myoid` int(11) NOT NULL; # was int(11) NOT NULL AUTO_INCREMENT
+ALTER TABLE `cd` CHANGE COLUMN `title` `title` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `cd` CHANGE COLUMN `description` `description` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `cd` CHANGE COLUMN `location` `location` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `cd` CHANGE COLUMN `price` `price` decimal(10,2) NOT NULL DEFAULT '0.00'; # was double(10,2) NOT NULL DEFAULT '0.00'
+ALTER TABLE `cd` DROP INDEX `myoid`; # was UNIQUE (`myoid`)
+ALTER TABLE `cd_copy_info` CHANGE COLUMN `myoid` `myoid` int(11) NOT NULL; # was int(11) NOT NULL AUTO_INCREMENT
+ALTER TABLE `cd_copy_info` DROP INDEX `myoid`; # was UNIQUE (`myoid`)
+ALTER TABLE `dvd` CHANGE COLUMN `location` `location` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `dvd` CHANGE COLUMN `studio` `studio` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `dvd` CHANGE COLUMN `dvddirector` `dvddirector` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `dvd` CHANGE COLUMN `dvdactor` `dvdactor` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `dvd` CHANGE COLUMN `price` `price` decimal(10,2) NOT NULL DEFAULT '0.00'; # was double(10,2) NOT NULL DEFAULT '0.00'
+ALTER TABLE `dvd` CHANGE COLUMN `dvdformat` `dvdformat` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `dvd` CHANGE COLUMN `back_cover` `back_cover` blob; # was varbinary(1024) DEFAULT NULL
+ALTER TABLE `dvd` CHANGE COLUMN `front_cover` `front_cover` blob; # was varbinary(1024) DEFAULT NULL
+ALTER TABLE `dvd` CHANGE COLUMN `myoid` `myoid` int(11) NOT NULL; # was int(11) NOT NULL AUTO_INCREMENT
+ALTER TABLE `dvd` CHANGE COLUMN `description` `description` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `dvd` CHANGE COLUMN `title` `title` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `dvd` DROP INDEX `myoid`; # was UNIQUE (`myoid`)
+ALTER TABLE `dvd_copy_info` CHANGE COLUMN `myoid` `myoid` int(11) NOT NULL; # was int(11) NOT NULL AUTO_INCREMENT
+ALTER TABLE `dvd_copy_info` DROP INDEX `myoid`; # was UNIQUE (`myoid`)
+ALTER TABLE `magazine` CHANGE COLUMN `location` `location` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `magazine` CHANGE COLUMN `price` `price` decimal(10,2) NOT NULL DEFAULT '0.00'; # was double(10,2) NOT NULL DEFAULT '0.00'
+ALTER TABLE `magazine` CHANGE COLUMN `publisher` `publisher` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `magazine` CHANGE COLUMN `back_cover` `back_cover` blob; # was varbinary(1024) DEFAULT NULL
+ALTER TABLE `magazine` CHANGE COLUMN `myoid` `myoid` int(11) NOT NULL; # was int(11) NOT NULL AUTO_INCREMENT
+ALTER TABLE `magazine` CHANGE COLUMN `front_cover` `front_cover` blob; # was varbinary(1024) DEFAULT NULL
+ALTER TABLE `magazine` CHANGE COLUMN `description` `description` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `magazine` CHANGE COLUMN `title` `title` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `magazine` DROP INDEX `myoid`; # was UNIQUE (`myoid`)
+ALTER TABLE `magazine_copy_info` CHANGE COLUMN `myoid` `myoid` int(11) NOT NULL; # was int(11) NOT NULL AUTO_INCREMENT
+ALTER TABLE `magazine_copy_info` DROP INDEX `myoid`; # was UNIQUE (`myoid`)
+ALTER TABLE `videogame` CHANGE COLUMN `back_cover` `back_cover` blob; # was varbinary(1024) DEFAULT NULL
+ALTER TABLE `videogame` CHANGE COLUMN `publisher` `publisher` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `videogame` CHANGE COLUMN `description` `description` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `videogame` CHANGE COLUMN `title` `title` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `videogame` CHANGE COLUMN `myoid` `myoid` int(11) NOT NULL; # was int(11) NOT NULL AUTO_INCREMENT
+ALTER TABLE `videogame` CHANGE COLUMN `front_cover` `front_cover` blob; # was varbinary(1024) DEFAULT NULL
+ALTER TABLE `videogame` CHANGE COLUMN `location` `location` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `videogame` CHANGE COLUMN `developer` `developer` text NOT NULL; # was longtext NOT NULL
+ALTER TABLE `videogame` CHANGE COLUMN `price` `price` decimal(10,2) NOT NULL DEFAULT '0.00'; # was double(10,2) NOT NULL DEFAULT '0.00'
+ALTER TABLE `videogame` DROP INDEX `myoid`; # was UNIQUE (`myoid`)
+ALTER TABLE `videogame_copy_info` CHANGE COLUMN `myoid` `myoid` int(11) NOT NULL; # was int(11) NOT NULL AUTO_INCREMENT
+ALTER TABLE `videogame_copy_info` DROP INDEX `myoid`; # was UNIQUE (`myoid`)
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r35.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r44.sql
+ALTER TABLE `book` ADD COLUMN `offsystem_url` text;
+ALTER TABLE `cd` ADD COLUMN `offsystem_url` text;
+ALTER TABLE `dvd` ADD COLUMN `offsystem_url` text;
+ALTER TABLE `magazine` ADD COLUMN `offsystem_url` text;
+ALTER TABLE `videogame` ADD COLUMN `offsystem_url` text;
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r44.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r52.sql
+ALTER TABLE `book` CHANGE COLUMN `myoid` `myoid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `book_borrower` CHANGE COLUMN `item_oid` `item_oid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `book_copy_info` CHANGE COLUMN `myoid` `myoid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `book_copy_info` CHANGE COLUMN `item_oid` `item_oid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `cd` CHANGE COLUMN `myoid` `myoid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `cd_borrower` CHANGE COLUMN `item_oid` `item_oid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `cd_copy_info` CHANGE COLUMN `item_oid` `item_oid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `cd_copy_info` CHANGE COLUMN `myoid` `myoid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `cd_songs` CHANGE COLUMN `item_oid` `item_oid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `dvd` CHANGE COLUMN `myoid` `myoid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `dvd_borrower` CHANGE COLUMN `item_oid` `item_oid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `dvd_copy_info` CHANGE COLUMN `myoid` `myoid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `dvd_copy_info` CHANGE COLUMN `item_oid` `item_oid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `magazine` CHANGE COLUMN `myoid` `myoid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `magazine_borrower` CHANGE COLUMN `item_oid` `item_oid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `magazine_copy_info` CHANGE COLUMN `myoid` `myoid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `magazine_copy_info` CHANGE COLUMN `item_oid` `item_oid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `member_history` CHANGE COLUMN `item_oid` `item_oid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `videogame` CHANGE COLUMN `myoid` `myoid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `videogame_borrower` CHANGE COLUMN `item_oid` `item_oid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `videogame_copy_info` CHANGE COLUMN `item_oid` `item_oid` bigint(20) NOT NULL; # was int(11) NOT NULL
+ALTER TABLE `videogame_copy_info` CHANGE COLUMN `myoid` `myoid` bigint(20) NOT NULL; # was int(11) NOT NULL
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r52.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r80.sql
+ALTER TABLE `member` CHANGE COLUMN `state_abbr` `state_abbr` varchar(16) NOT NULL DEFAULT 'N/A'; # was varchar(2) NOT NULL DEFAULT 'AK'
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r80.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r81.sql
+DROP TABLE `book_borrower`;
+DROP TABLE `cd_borrower`;
+DROP TABLE `dvd_borrower`;
+DROP TABLE `magazine_borrower`;
+DROP TABLE `videogame_borrower`;
+CREATE TABLE `item_borrower` (
+`item_oid` bigint(20) NOT NULL,
+`memberid` varchar(16) NOT NULL,
+`reserved_date` varchar(32) NOT NULL,
+`duedate` varchar(32) NOT NULL,
+`myoid` int(11) NOT NULL AUTO_INCREMENT,
+`copyid` varchar(64) NOT NULL,
+`copy_number` int(11) NOT NULL DEFAULT '1',
+`reserved_by` varchar(128) NOT NULL,
+`type` varchar(16) NOT NULL,
+PRIMARY KEY (`myoid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `magazine`;
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r81.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r101.sql
+ALTER TABLE `book` DROP COLUMN `back_cover_fmt`; # was varchar(8) DEFAULT NULL
+ALTER TABLE `book` DROP COLUMN `front_cover_fmt`; # was varchar(8) DEFAULT NULL
+ALTER TABLE `cd` DROP COLUMN `front_cover_fmt`; # was varchar(8) DEFAULT NULL
+ALTER TABLE `cd` DROP COLUMN `back_cover_fmt`; # was varchar(8) DEFAULT NULL
+ALTER TABLE `dvd` DROP COLUMN `front_cover_fmt`; # was varchar(8) DEFAULT NULL
+ALTER TABLE `dvd` DROP COLUMN `back_cover_fmt`; # was varchar(8) DEFAULT NULL
+ALTER TABLE `magazine` DROP COLUMN `front_cover_fmt`; # was varchar(8) DEFAULT NULL
+ALTER TABLE `magazine` CHANGE COLUMN `type` `type` varchar(16) NOT NULL DEFAULT 'Magazine'; # was varchar(16) NOT NULL DEFAULT 'Journal'
+ALTER TABLE `magazine` DROP COLUMN `back_cover_fmt`; # was varchar(8) DEFAULT NULL
+ALTER TABLE `videogame` DROP COLUMN `front_cover_fmt`; # was varchar(8) DEFAULT NULL
+ALTER TABLE `videogame` DROP COLUMN `back_cover_fmt`; # was varchar(8) DEFAULT NULL
+CREATE TABLE `journal` (
+`id` varchar(32) NOT NULL,
+`myoid` bigint(20) NOT NULL,
+`title` text NOT NULL,
+`pdate` varchar(32) NOT NULL,
+`publisher` text NOT NULL,
+`category` varchar(64) NOT NULL,
+`price` decimal(10,2) NOT NULL DEFAULT '0.00',
+`description` text NOT NULL,
+`language` varchar(64) NOT NULL DEFAULT 'UNKNOWN',
+`monetary_units` varchar(64) NOT NULL DEFAULT 'UNKNOWN',
+`quantity` int(11) NOT NULL DEFAULT '1',
+`location` text NOT NULL,
+`mag_volume` int(11) NOT NULL DEFAULT '0',
+`mag_no` int(11) NOT NULL DEFAULT '0',
+`lccontrolnumber` varchar(64) DEFAULT NULL,
+`callnumber` varchar(64) DEFAULT NULL,
+`deweynumber` varchar(64) DEFAULT NULL,
+`front_cover` blob,
+`back_cover` blob,
+`type` varchar(16) NOT NULL DEFAULT 'Journal',
+`offsystem_url` text,
+PRIMARY KEY (`id`,`mag_volume`,`mag_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `journal_copy_info`;
+CREATE TABLE `journal_copy_info` (
+`item_oid` bigint(20) NOT NULL,
+`myoid` bigint(20) NOT NULL,
+`copyid` varchar(64) NOT NULL,
+`copy_number` int(11) NOT NULL DEFAULT '1',
+PRIMARY KEY (`item_oid`,`copyid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `magazine`;
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r101.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r102.sql
+ALTER TABLE `journal` DROP COLUMN `mag_no`; # was int(11) NOT NULL DEFAULT '0'
+ALTER TABLE `journal` DROP COLUMN `mag_volume`; # was int(11) NOT NULL DEFAULT '0'
+ALTER TABLE `journal` ADD COLUMN `issueno` int(11) NOT NULL DEFAULT '0';
+ALTER TABLE `journal` ADD COLUMN `issuevolume` int(11) NOT NULL DEFAULT '0';
+ALTER TABLE `journal` DROP PRIMARY KEY; # was (`id`,`mag_volume`,`mag_no`)
+ALTER TABLE `journal` ADD PRIMARY KEY (`id`,`issuevolume`,`issueno`);
+ALTER TABLE `magazine` DROP COLUMN `mag_volume`; # was int(11) NOT NULL DEFAULT '0'
+ALTER TABLE `magazine` DROP COLUMN `mag_no`; # was int(11) NOT NULL DEFAULT '0'
+ALTER TABLE `magazine` ADD COLUMN `issuevolume` int(11) NOT NULL DEFAULT '0';
+ALTER TABLE `magazine` ADD COLUMN `issueno` int(11) NOT NULL DEFAULT '0';
+ALTER TABLE `magazine` DROP PRIMARY KEY; # was (`id`,`mag_volume`,`mag_no`)
+ALTER TABLE `magazine` ADD PRIMARY KEY (`id`,`issuevolume`,`issueno`);
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r102.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r115.sql
+ALTER TABLE `book` CHANGE COLUMN `category` `category` text NOT NULL; # was varchar(64) NOT NULL
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r115.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r116.sql
+ALTER TABLE `cd` CHANGE COLUMN `category` `category` text NOT NULL; # was varchar(64) NOT NULL
+ALTER TABLE `dvd` CHANGE COLUMN `category` `category` text NOT NULL; # was varchar(64) NOT NULL
+ALTER TABLE `journal` CHANGE COLUMN `category` `category` text NOT NULL; # was varchar(64) NOT NULL
+ALTER TABLE `magazine` CHANGE COLUMN `category` `category` text NOT NULL; # was varchar(64) NOT NULL
+ALTER TABLE `videogame` CHANGE COLUMN `genre` `genre` text NOT NULL; # was varchar(64) NOT NULL
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r116.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r154.sql
+ALTER TABLE `member` ADD COLUMN `email` varchar(128) DEFAULT NULL;
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r154.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r233.sql
+ALTER TABLE `book` ADD COLUMN `place` text NOT NULL;
+ALTER TABLE `journal` ADD COLUMN `place` text NOT NULL;
+ALTER TABLE `magazine` ADD COLUMN `place` text NOT NULL;
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r233.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r236.sql
+ALTER TABLE `videogame` ADD COLUMN `place` text NOT NULL;
+
+ INFO 
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r236.sql
+/home/tmp/repro/biblioteq/input/db_create_schema_mod.r285.sql
+ALTER TABLE `book` DROP COLUMN `offsystem_url`; # was text
+ALTER TABLE `cd` DROP COLUMN `offsystem_url`; # was text
+ALTER TABLE `dvd` DROP COLUMN `offsystem_url`; # was text
+ALTER TABLE `journal` DROP COLUMN `offsystem_url`; # was text
+ALTER TABLE `magazine` DROP COLUMN `offsystem_url`; # was text
+ALTER TABLE `videogame` DROP COLUMN `offsystem_url`; # was text
+

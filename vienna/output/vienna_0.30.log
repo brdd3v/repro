@@ -1,0 +1,746 @@
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.4.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.12.m/out_Database.sql
+ALTER TABLE `rss_folders` ADD COLUMN `bloglines_id` int(11) DEFAULT NULL;
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.12.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.13.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.13.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.15.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.15.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.17.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.17.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.20.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.20.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.23.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.23.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.25.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.25.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.29.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.29.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.30.m/out_Database.sql
+ALTER TABLE `messages` ADD COLUMN `deleted_flag` int(11) DEFAULT NULL;
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.30.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.31.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.31.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.33.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.33.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.35.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.35.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.38.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.38.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.40.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.40.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.48.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.48.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.73.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.73.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.91.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.91.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.92.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.92.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.98.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.98.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.104.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.104.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.109.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.109.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.113.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.113.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.116.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.116.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.117.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.117.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.119.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.119.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.125.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.125.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.127.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.127.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.129.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.129.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.131.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.131.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.146.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.146.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.156.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.156.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.169.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.169.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.172.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.172.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.175.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.175.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.185.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.185.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.187.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.187.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.206.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.206.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.208.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.208.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.233.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.233.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.238.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.238.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.241.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.241.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.254.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.254.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.387.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.387.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.401.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.401.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.0.0/refine/Database.442.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.4.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.12.m/out_Database.sql
+ALTER TABLE `rss_folders` ADD COLUMN `bloglines_id` int(11) DEFAULT NULL;
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.12.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.13.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.13.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.15.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.15.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.17.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.17.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.20.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.20.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.23.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.23.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.25.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.25.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.29.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.29.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.30.m/out_Database.sql
+ALTER TABLE `messages` ADD COLUMN `deleted_flag` int(11) DEFAULT NULL;
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.30.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.31.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.31.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.33.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.33.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.35.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.35.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.38.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.38.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.40.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.40.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.48.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.48.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.73.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.73.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.91.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.91.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.92.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.92.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.98.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.98.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.104.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.104.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.109.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.109.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.113.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.113.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.116.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.116.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.117.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.117.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.119.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.119.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.125.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.125.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.127.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.127.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.129.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.129.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.131.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.131.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.146.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.146.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.156.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.156.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.169.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.169.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.172.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.172.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.175.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.175.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.185.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.185.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.187.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.187.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.206.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.206.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.208.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.208.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.233.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.233.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.238.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.238.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.241.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.241.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.254.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.254.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.337.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.337.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.350.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.350.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.367.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.367.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.370.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.370.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.371.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.371.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.388.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.388.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.402.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.402.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.418.m/out_Database.sql
+ALTER TABLE `messages` ADD COLUMN `createddate` int(11) DEFAULT NULL;
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.418.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.430.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.430.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.438.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.438.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.454.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.454.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.484.m/out_Database.sql
+ALTER TABLE `folders` ADD COLUMN `first_child` int(11) DEFAULT NULL;
+ALTER TABLE `folders` ADD COLUMN `next_sibling` int(11) DEFAULT NULL;
+ALTER TABLE `info` ADD COLUMN `first_folder` int(11) DEFAULT NULL;
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.484.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.485.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.485.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.486.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.486.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.490.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.490.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.494.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.494.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.496.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.496.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.497.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.497.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.513.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.513.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.518.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.518.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.525.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.525.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.526.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.526.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.529.m/out_Database.sql
+ALTER TABLE `info` ADD COLUMN `folder_sort` int(11) DEFAULT NULL;
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.529.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.540.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.540.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.541.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.541.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.545.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.545.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.547.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.547.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.555.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.555.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.556.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.556.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.565.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.565.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.574.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.574.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.575.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.575.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.576.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.576.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.577.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.577.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.578.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.578.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.588.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.588.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.591.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.591.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.593.m/out_Database.sql
+ALTER TABLE `messages` ADD COLUMN `revised_flag` int(11) DEFAULT NULL;
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.593.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.594.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.594.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.603.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.603.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.604.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.604.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.615.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.615.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.631.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.631.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.639.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.639.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.652.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.652.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.666.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.666.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.680.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.680.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.723.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.723.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.730.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.730.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.796.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.796.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.1.0/refine/Database.915.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.763.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.777.m/out_Database.sql
+ALTER TABLE `messages` ADD COLUMN `hasenclosure_flag` int(11) DEFAULT NULL;
+ALTER TABLE `messages` ADD COLUMN `enclosuredownloaded_flag` int(11) DEFAULT NULL;
+ALTER TABLE `messages` ADD COLUMN `enclosure` int(11) DEFAULT NULL;
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.777.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.778.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.778.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.779.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.779.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.781.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.781.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.782.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.782.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.786.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.786.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.813.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.813.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.866.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.866.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.869.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.869.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.878.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.878.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.881.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.881.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.906.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.906.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.961.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.961.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.2.0/refine/Database.1035.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.3.0/refine/Database.1072.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.3.0/refine/Database.1146.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.3.0/refine/Database.1146.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.3.0/refine/Database.1185.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.3.0/refine/Database.1185.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.3.0/refine/Database.1197.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1072.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1146.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1146.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1185.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1185.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1197.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1197.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1219.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1219.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1252.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1252.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1264.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1264.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1300.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1300.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1301.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1301.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1309.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1309.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1320.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1320.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1323.m/out_Database.sql
+CREATE TABLE `rss_guids` (
+`message_id` int(11) DEFAULT NULL,
+`folder_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `smart_folders`;
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1323.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1329.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1329.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1352.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1352.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1356.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1356.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1382.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1382.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.4.0/refine/Database.1493.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.5.0/refine/Database.1456.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.5.0/refine/Database.1485.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.5.0/refine/Database.1485.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.5.0/refine/Database.1508.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.5.0/refine/Database.1508.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.5.0/refine/Database.1521.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.5.0/refine/Database.1521.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.5.0/refine/Database.1522.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.5.0/refine/Database.1522.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.5.0/refine/Database.1523.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.6.0/refine/Database.1456.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.6.0/refine/Database.1485.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.6.0/refine/Database.1485.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.6.0/refine/Database.1508.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.6.0/refine/Database.1508.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.6.0/refine/Database.1521.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.6.0/refine/Database.1521.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.6.0/refine/Database.1522.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.6.0/refine/Database.1522.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.6.0/refine/Database.1523.m/out_Database.sql
+
+ INFO 
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.6.0/refine/Database.1523.m/out_Database.sql
+/home/tmp/repro/vienna/input/ex_c_sql/DATABASE-2.6.0/refine/Database.1543.m/out_Database.sql
+

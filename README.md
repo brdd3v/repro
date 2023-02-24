@@ -1,4 +1,4 @@
-# Reproduction of the Study "Schema Evolution Analysis for Embedded Databases"
+# Reproduction/Replication of the Study "Schema Evolution Analysis for Embedded Databases"
 Reproduction of the study was carried out on Linux OS, so the configuration is designed for this OS.
 
 ## Table of Contents
@@ -49,7 +49,7 @@ or
 proc = subprocess.Popen(["mysqldiff", "--user=root", "--password=passwd", file_1, file_2],
 ```
 
-**Important!** 
+**Important!**
 If you plan to use version 0.30, then in the script "proc.py", in the "make_comp" function, you must specify the path to the file "mysqldiff.pl".
 
 
@@ -59,7 +59,7 @@ The current directory contains the python script "proc.py".<br/>
 This script is responsible for comparing schemas, parsing the result of the “mysqldiff” program, as well as for saving log information and counting the number of SMOs.<br/>
 (This file should be used after all the schemas were extracted.)
 
-Each project, Monotone, Vienna and BiblioteQ, has its own folder<sup>1</sup>. 
+Each project, Monotone, Vienna and BiblioteQ, has its own folder<sup>1</sup>.
 Each projects folder consist of __input__ and __output__ directories.
 
 Directory __input__ contains:
@@ -79,8 +79,8 @@ The current directory also contains the __archives__ folder, with the archives o
 Raw data, input and output data along with the logs are already in this repository.<br/>
 To repeat our steps, do the following:<br/>
    1. We have already found and extracted the source files from certain versions and revisions (described in more detail in our paper), so the first step is to extract and transform the database schemas from raw files.
-This can be done using the "schema_extractor.py" script in the input directory of each project<sup>4</sup>. 
-   2. The next step is to run the "proc.py" script: 
+This can be done using the "schema_extractor.py" script in the input directory of each project<sup>4</sup>.
+   2. The next step is to run the "proc.py" script:
 ```bash
 python3 proc.py
 ```
@@ -96,4 +96,3 @@ __Footnotes__
 2. The input files for the project "Vienna" are in the subfolder __refine__.
 3. The files of the "Monotone" project will also contain either "sql" or "cc" in the name, indicating one or another approach (see the paper for details).
 4. For the project "Vienna", use the original scripts and the original instructions (Steps 3-9).
-

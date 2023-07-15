@@ -22,6 +22,7 @@ Various versions of the program can be downloaded from this site: https://metacp
 
 * **Install python-modules**:
    * pandas
+   * psutil
 
 
 * **Configure MySQL**<br/>

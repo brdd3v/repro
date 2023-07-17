@@ -1,0 +1,8 @@
+archives
+playbook.yaml
+requirements_mod.txt
+Vagrantfile
+.git
+.gitattributes
+*.log
+__pycache__

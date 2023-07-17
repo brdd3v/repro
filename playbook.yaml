@@ -1,0 +1,45 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Update package manager repositories cache
+      apt:
+        update_cache: true
+
+    - name: Install a list of packages
+      apt:
+        pkg:
+          - mysql-server
+          - python3-pip
+          - unzip
+
+    - name: Install python requirements
+      pip:
+        requirements: /vagrant/requirements_mod.txt
+
+    - name: Make sure mysql service is running
+      service:
+        name: mysql
+        state: started
+        enabled: true
+
+    - name: Copy options file if it doesn't exist
+      command: cp /vagrant/.my.cnf /home/vagrant
+      args:
+        creates: /home/vagrant/.my.cnf
+
+    - name: Set mysql root password
+      mysql_user:
+        name: root
+        password: root
+        login_user: root
+        login_password: root
+        login_unix_socket: /var/run/mysqld/mysqld.sock
+        check_implicit_admin: true
+
+    - name: Install mysqldiff
+      command: cpan ESTRABD/MySQL-Diff-0.60.tar.gz
+      args:
+        creates: /usr/local/bin/mysqldiff
+      environment:
+        PERL_MM_USE_DEFAULT: 1

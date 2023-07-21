@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include vagrant.repro"
+      ansible.builtin.include_role:
+        name: "vagrant.repro"

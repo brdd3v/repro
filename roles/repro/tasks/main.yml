@@ -1,0 +1,56 @@
+---
+# tasks file for repro
+- name: Update package manager repositories cache
+  apt:
+    update_cache: true
+  become: true
+
+- name: Install a list of packages
+  apt:
+    pkg:
+      - mysql-server
+      - python3-pip
+      - unzip
+  become: true
+
+- name: Install python requirements
+  pip:
+    name:
+      - pandas
+      - psutil
+      - PyMySQL
+  become: true
+
+- name: Make sure mysql service is running
+  service:
+    name: mysql
+    state: started
+    enabled: true
+  become: true
+
+- name: Create options file if it doesn't exist
+  copy:
+    dest: /home/vagrant/.my.cnf
+    content: |
+      [client]
+      user=root
+      password=root
+  become: true
+
+- name: Set mysql root password
+  mysql_user:
+    name: root
+    password: root
+    login_user: root
+    login_password: root
+    login_unix_socket: /var/run/mysqld/mysqld.sock
+    check_implicit_admin: true
+  become: true
+
+- name: Install mysqldiff
+  command: cpan ESTRABD/MySQL-Diff-0.60.tar.gz
+  args:
+    creates: /usr/local/bin/mysqldiff
+  environment:
+    PERL_MM_USE_DEFAULT: '1'
+  become: true

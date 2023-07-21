@@ -1,0 +1,27 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: vagrant
+  provider:
+    name: virtualbox
+platforms:
+  - name: repro-vm
+    box: ubuntu/bionic64
+    memory: 1324
+provisioner:
+  name: ansible
+verifier:
+  name: testinfra
+  options:
+    v: True
+    sudo: True
+scenario:
+  name: default
+  test_sequence:
+    - destroy
+    - syntax
+    - create
+    - converge
+    - verify
+    - destroy

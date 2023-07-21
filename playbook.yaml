@@ -15,7 +15,10 @@
 
     - name: Install python requirements
       pip:
-        requirements: /vagrant/requirements_mod.txt
+        name:
+          - pandas
+          - psutil
+          - PyMySQL
 
     - name: Make sure mysql service is running
       service:

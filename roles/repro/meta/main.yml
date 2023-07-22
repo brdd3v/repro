@@ -1,9 +1,9 @@
 galaxy_info:
-  author: your name
+  author: Braininger Dimitri
   namespace: vagrant
-  description: your role description
-  company: your company (optional)
-  license: Apache-2.0
+  description: repro role
+  company: none
+  license: GPL-2.0
   min_ansible_version: 2.1
   galaxy_tags: []
     # List tags for your role here, one per line. A tag is a keyword that describes

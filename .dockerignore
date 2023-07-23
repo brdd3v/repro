@@ -1,4 +1,5 @@
 archives
+roles
 playbook.yaml
 requirements_mod.txt
 Vagrantfile

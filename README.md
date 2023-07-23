@@ -39,9 +39,9 @@ This can be done in <u>three</u> ways:
    vagrant ssh
    ```
    Inside the virtual machine you have <u>two</u> options:<br/>
-   The first is to go to the **/vagrant** folder and continue to work from there<br/>
+   The first option is to go to the **/vagrant** folder and continue to work from there<br/>
    (This folder is a shared folder between a guest VM and a host. All changes in it will affect the host files).<br/>
-   The second is to copy the contents of the **/vagrant** folder for example in a home catalog on a virtual machine:
+   The second option is to copy the contents of the **/vagrant** folder, for example, to home directory on a virtual machine:
    ```
    cp -r /vagrant/* /home/vagrant
    ```

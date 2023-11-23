@@ -28,7 +28,7 @@ This can be done in <u>three</u> ways:
    service mysql start
    ```
 
-2. **[Vagrant](https://www.vagrantup.com/)/[Ansible](https://www.ansible.com/)**<sup>1</sup>
+2. **[Vagrant](https://www.vagrantup.com/) & [Ansible](https://www.ansible.com/)**<sup>1</sup>
 
    To create and prepare a virtual machine:
    ```

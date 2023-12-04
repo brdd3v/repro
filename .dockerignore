@@ -1,9 +1,9 @@
-archives
-roles
-playbook.yaml
-requirements_mod.txt
-Vagrantfile
+*.log
 .git
 .gitattributes
-*.log
+Dockerfile
+Vagrantfile
 __pycache__
+archives
+playbook.yaml
+roles

@@ -8,7 +8,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python3-dev \
         python3-pip \
         python3-setuptools \
-        unzip
+        unzip \
+        && apt-get clean \
+        && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /repro
 
@@ -21,6 +23,6 @@ RUN pip3 --no-cache-dir install -r requirements.txt
 
 COPY . .
 
-RUN cp .my.cnf $HOME
+RUN cp .my.cnf "$HOME"
 
 CMD ["bash"]
